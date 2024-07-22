@@ -15,7 +15,7 @@ let package = Package(
   ],
 
   dependencies: [
-      .package(url: "https://github.com/firebase/abseil-cpp-SwiftPM.git", "0.20240116.1"..<"0.20240117.0"),
+      .package(url: "https://github.com/firebase/abseil-cpp-SwiftPM.git", .upToNextMinor(from: "0.20230802.0")),
   ],
 
   targets: [
@@ -141,7 +141,7 @@ let package = Package(
         "src/google/protobuf/reflection_tester.h",
       ],
       sources: [
-        "src/google/protobuf/any_lite.cc",
+        /*"src/google/protobuf/any_lite.cc",
         "src/google/protobuf/any.cc",
         "src/google/protobuf/any.h",
         "src/google/protobuf/any.pb.cc",
@@ -329,7 +329,7 @@ let package = Package(
         "src/google/protobuf/stubs/status_macros.h"
       ],
       resources: [
-        .copy("PrivacyInfo.xcprivacy"),
+        .copy("../PrivacyInfo.xcprivacy"),
       ],
       publicHeadersPath: ".",
       cSettings: [
