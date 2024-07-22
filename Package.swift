@@ -13,9 +13,17 @@ let package = Package(
       ]
     )
   ],
+
+  dependencies: [
+      .package(url: "https://github.com/firebase/abseil-cpp-SwiftPM.git", "0.20240116.1"..<"0.20240117.0"),
+  ],
+
   targets: [
     .target(
       name: "ProtobufCxx",
+      dependencies: [
+        .product(name:"abseil", package: "abseil-cpp-SwiftPM"),
+      ],
       path: "src",
       exclude: [
         "src/google/protobuf/compiler",
