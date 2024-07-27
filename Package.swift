@@ -7,19 +7,20 @@ let package = Package(
   name: "Protobuf",
   products: [
     .library(
-      name: "ProtobufCxx",
+      name: "Protobuf",
+      type: .dynamic,
       targets: [
-        "ProtobufCxx",
+        "Protobuf",
       ]
     )
   ],
 
   dependencies: [
-//      .package(url: "https://github.com/google/abseil-cpp-binary.git", .exact("1.2024011602.0")),
+      .package(url: "https://github.com/google/abseil-cpp-binary.git", .exact("1.2024011602.0")),
   ],
 
   targets: [
-    .target(
+    /*.target(
           name: "abseil",
           path: "third_party/abseil-cpp",
           exclude: [
@@ -36,6 +37,8 @@ let package = Package(
             "base/internal/exception_safety_testing.h",
             "absl/random/benchmarks.cc",
             // other
+            "absl/time/internal/cctz/testdata/",
+
             "algorithm/algorithm_test.cc",
             "algorithm/container_test.cc",
             "base/internal/atomic_hook_test.cc",
@@ -589,6 +592,17 @@ let package = Package(
             
             "container/internal/raw_hash_set_probe_benchmark.cc",
             "absl/container/internal/raw_hash_set_probe_benchmark.cc",
+
+            "functional/overload_test.cc",
+            "absl/functional/overload_test.cc",
+            
+            "abseil.podspec.gen.py",
+            "absl/abseil.podspec.gen.py",
+            "absl/utility/CMakeLists.txt",
+            "absl/utility/BUILD.bazel",
+            "absl/types/CMakeLists.txt",
+            "absl/types/BUILD.bazel",
+            "absl/time/internal/get_current_time_posix.inc",
           ],
           sources: [
             "absl/"
@@ -600,12 +614,11 @@ let package = Package(
           linkerSettings: [
             .linkedFramework("CoreFoundation"),
           ]
-    ),
+    ),*/
     .target(
-      name: "ProtobufCxx",
+      name: "Protobuf",
       dependencies: [
-//        .product(name:"abseil", package: "abseil-cpp-binary"),
-        "abseil"
+        .product(name:"abseil", package: "abseil-cpp-binary"),
       ],
       path: "src",
       exclude: [
@@ -724,8 +737,7 @@ let package = Package(
         "src/google/protobuf/reflection_tester.h",
       ],
       sources: [
-        /*"src/google/protobuf/any_lite.cc",
-        "src/google/protobuf/any.cc",
+        /*"src/google/protobuf/any.cc",
         "src/google/protobuf/any.h",
         "src/google/protobuf/any.pb.cc",
         "src/google/protobuf/any.pb.h",
@@ -914,10 +926,7 @@ let package = Package(
       resources: [
         .copy("../PrivacyInfo.xcprivacy"),
       ],
-      publicHeadersPath: ".",
-      cSettings: [
-        .headerSearchPath("./"),
-      ]
+      publicHeadersPath: "."
     )
   ],
   cxxLanguageStandard: .gnucxx14
