@@ -554,6 +554,19 @@ let package = Package(
             "absl/types/variant_test.cc",
             "absl/utility/internal/if_constexpr_test.cc",
             "absl/utility/utility_test.cc",
+
+            "base/exception_safety_testing_test.cc",
+            "absl/base/exception_safety_testing_test.cc",
+            "container/internal/unordered_map_test.cc",
+            "absl/container/internal/unordered_map_test.cc",
+            "container/internal/unordered_set_test.cc",
+            "absl/container/internal/unordered_set_test.cc",
+            "log/scoped_mock_log_test.cc",
+            "absl/log/scoped_mock_log_test.cc",
+            "random/mock_distributions_test.cc",
+            "absl/random/mock_distributions_test.cc",
+            "random/mocking_bit_gen_test.cc",
+            "absl/random/mocking_bit_gen_test.cc",
           ],
           sources: [
             "absl/"
