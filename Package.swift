@@ -576,6 +576,9 @@ let package = Package(
 
             "base/internal/low_level_alloc_test.cc",
             "absl/base/internal/low_level_alloc_test.cc",
+
+            "synchronization/lifetime_test.cc",
+            "absl/synchronization/lifetime_test.cc",
           ],
           sources: [
             "absl/"
