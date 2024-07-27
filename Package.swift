@@ -567,9 +567,12 @@ let package = Package(
             "absl/random/mock_distributions_test.cc",
             "random/mocking_bit_gen_test.cc",
             "absl/random/mocking_bit_gen_test.cc",
-            
+
             "container/node_hash_set_test.cc",
             "absl/container/node_hash_set_test.cc",
+
+            "container/node_hash_map_test.cc",
+            "absl/container/node_hash_map_test.cc",
           ],
           sources: [
             "absl/"
