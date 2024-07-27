@@ -585,6 +585,9 @@ let package = Package(
             
             "random/internal/nanobenchmark_test.cc",
             "absl/random/internal/nanobenchmark_test.cc",
+            
+            "container/internal/raw_hash_set_probe_benchmark.cc",
+            "absl/container/internal/raw_hash_set_probe_benchmark.cc",
           ],
           sources: [
             "absl/"
