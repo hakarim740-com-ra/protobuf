@@ -573,6 +573,9 @@ let package = Package(
 
             "container/node_hash_map_test.cc",
             "absl/container/node_hash_map_test.cc",
+
+            "base/internal/low_level_alloc_test.cc",
+            "absl/base/internal/low_level_alloc_test.cc",
           ],
           sources: [
             "absl/"
