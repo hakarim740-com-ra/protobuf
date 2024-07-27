@@ -21,7 +21,7 @@ let package = Package(
   targets: [
     .target(
           name: "abseil",
-          path: "third_party",
+          path: "third_party/abseil-cpp",
           exclude: [
             // main functions
             "absl/hash/internal/print_hash_of.cc",
