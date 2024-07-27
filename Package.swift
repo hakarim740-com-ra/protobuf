@@ -15,14 +15,14 @@ let package = Package(
   ],
 
   dependencies: [
-      .package(url: "https://github.com/firebase/abseil-cpp-SwiftPM.git", .exact("0.20230802.0")),
+      .package(url: "https://github.com/google/abseil-cpp-binary.git", .exact("1.2024011602.0")),
   ],
 
   targets: [
     .target(
       name: "ProtobufCxx",
       dependencies: [
-        .product(name:"abseil", package: "abseil-cpp-SwiftPM"),
+        .product(name:"abseil", package: "abseil-cpp-binary"),
       ],
       path: "src",
       exclude: [
