@@ -579,6 +579,9 @@ let package = Package(
 
             "synchronization/lifetime_test.cc",
             "absl/synchronization/lifetime_test.cc",
+            
+            "absl/strings/atod_manual_test.cc",
+            "absl/strings/atod_manual_test.cc",
           ],
           sources: [
             "absl/"
