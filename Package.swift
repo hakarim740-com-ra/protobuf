@@ -33,6 +33,7 @@ let package = Package(
             "absl/log/internal/test_matchers.cc",
             "absl/base/spinlock_test_common.cc",
             "absl/base/internal/exception_safety_testing.cc",
+            "base/internal/exception_safety_testing.h",
             "absl/random/benchmarks.cc",
             // other
             "algorithm/algorithm_test.cc",
