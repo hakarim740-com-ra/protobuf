@@ -582,6 +582,9 @@ let package = Package(
             
             "absl/strings/atod_manual_test.cc",
             "absl/strings/atod_manual_test.cc",
+            
+            "random/internal/nanobenchmark_test.cc",
+            "absl/random/internal/nanobenchmark_test.cc",
           ],
           sources: [
             "absl/"
